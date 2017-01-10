@@ -13,14 +13,16 @@ export default class Day extends React.Component {
     getDay(time) {
         const day=moment(time).locale(this.context.getLocale()).format('ll').toUpperCase();
         const today=moment(new Date()).locale(this.context.getLocale()).format('ll').toUpperCase();
-        const yesterday=moment(new Date()).day(0).locale(this.context.getLocale()).format('ll').toUpperCase();
+        const yesterday=moment(new Date()).subtract(1, 'days').locale(this.context.getLocale()).format('ll').toUpperCase();
         if(day==today){
-            return 'Today';
+           return 'Today';
         }
-        if(day==yesterday){
-            return 'Yesterday';
+        else if(day==yesterday){
+          return 'Yesterday';
         }
-        return day;
+        else{
+          return day;
+        }
     };
     render() {
         if (!isSameDay(this.props.currentMessage, this.props.previousMessage)) {
