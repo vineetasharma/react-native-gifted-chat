@@ -130,9 +130,9 @@ const defaultStyles = {
   },
   textStyle: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 17,
     backgroundColor: 'transparent',
-    fontWeight: '100',
+    fontWeight: '700',
   },
 };
 
