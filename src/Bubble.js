@@ -129,6 +129,7 @@ const styles = {
       borderRadius: 15,
       backgroundColor: '#f0f0f0',
       marginRight: 60,
+        marginTop:10,
       minHeight: 20,
       justifyContent: 'flex-end',
     },
