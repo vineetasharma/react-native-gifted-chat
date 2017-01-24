@@ -135,26 +135,26 @@ export default class MessageContainer extends React.Component {
     );
   }
 
-  render() {
-    return (
-      <View ref='container' style={{flex:1}}>
-        <ListView
-          enableEmptySections={true}
-          keyboardShouldPersistTaps={true}
-          automaticallyAdjustContentInsets={false}
-          initialListSize={20}
-          pageSize={20}
+    render() {
+        return (
+            <View ref='container' style={{flex:1,paddingBottom:30}}>
+              <ListView
+                  enableEmptySections={true}
+                  keyboardShouldPersistTaps={true}
+                  automaticallyAdjustContentInsets={false}
+                  initialListSize={20}
+                  pageSize={20}
 
-          dataSource={this.state.dataSource}
+                  dataSource={this.state.dataSource}
 
-          renderRow={this.renderRow}
-          renderHeader={this.renderFooter}
-          renderFooter={this.renderLoadEarlier}
-          renderScrollComponent={this.renderScrollComponent}
-        />
-      </View>
-    );
-  }
+                  renderRow={this.renderRow}
+                  renderHeader={this.renderFooter}
+                  renderFooter={this.renderLoadEarlier}
+                  renderScrollComponent={this.renderScrollComponent}
+              />
+            </View>
+        );
+    }
 }
 
 MessageContainer.defaultProps = {
