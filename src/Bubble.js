@@ -106,7 +106,7 @@ export default class Bubble extends React.Component {
             accessibilityTraits="text"
             {...this.props.touchableProps}
           >
-            <View>
+              <View style={(this.props.isInEditingMode === this.props.currentMessage._id)? {backgroundColor:'#ffffff',borderRadius:5} : null}>
               {this.renderCustomView()}
               {this.renderMessageImage()}
               {this.renderMessageText()}
