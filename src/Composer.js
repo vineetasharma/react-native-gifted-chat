@@ -14,7 +14,7 @@ export default class Composer extends React.Component {
         multiline={this.props.multiline}
         onChange={(e) => {
           this.props.onChange(e);
-          this.props.updateText(e.nativeEvent.text);
+          if(this.props.updateText) this.props.updateText(e.nativeEvent.text);
         }}
         style={[styles.textInput, this.props.textInputStyle, {
           height: this.props.composerHeight,
